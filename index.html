@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping List</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.9/purify.min.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <main>
+    <div class="container text-center">
+      <div class="row m-4">
+        <h1 class="text-primary display-4 fw-normal">Coffee Brew Recipes</h1>
+        <p class="fs-5 text-muted">Add custom recipes for your home brews below.</p>
+      </div>
+    </div>
+  
+  <div class="container">
+    <form id="recipe-form" class="p-4 m-4 row shadow-sm rounded-3 border border-primary">
+      <div class="form-group col-md-4 my-2">
+        <label for="name">Name of Brew</label>
+        <input required autocomplete="off" type="text" id="name" class="form-control" placeholder="e.g., Morning Brew">
+      </div>
+      <div class="form-group col-md-4 my-2">
+        <label for="method">Brew Method</label>
+        <input required autocomplete="off" type="text" id="method" class="form-control" placeholder="e.g., v60 Pour Over">
+      </div>
+      <div class="form-group col-md-4 my-2">
+        <label for="roast">Roast</label>
+        <input required autocomplete="off" type="text" id="roast" class="form-control" placeholder="e.g., Full City">
+      </div>
+      <div class="form-group col-md-4 my-2">
+        <label for="grind">Grind Size</label>
+        <input required autocomplete="off" type="text" id="grind" class="form-control" placeholder="e.g., 30">
+      </div>
+      <div class="form-group col-md-4 my-2">
+        <label for="ratio">Ratio</label>
+        <input required autocomplete="off" type="text" id="ratio" class="form-control" placeholder="e.g., 1:16">
+      </div>
+      <div class="form-group col-md-4 my-2">
+        <label for="note">Notes (optional)</label>
+        <input autocomplete="off" type="text" id="note" class="form-control">
+      </div>
+      <div class="form-group mt-4">
+        <input type="submit" value="Add Recipe" class="btn btn-primary">
+      </div>
+    </form>
+    <div class="container">
+      <div class="row m-4 border-bottom border-3 border-primary">
+        <p class="h3 text-primary">Saved Recipes</p>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 mx-4 my-6 text-center" id="recipe-container">
+    </div>
+  </div>
+  </main>
+</body>
+</html>
